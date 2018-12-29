@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="angular-app">
+    <head>
+        <title>Codix task</title>
+        <base href="/">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./styles/styles.css">
+        <script src="./node_modules/angular/angular.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+        <script src="ui-router.js"></script>
+        <script src="./client/components/app.js"></script>
+        <script src="./client/components/mainController.js"></script>
+        <script src="./client/components/homeController.js"></script>
+        <script src="./client/components/logUserController.js"></script>
+        <script src="./client/components/addUserController.js"></script>
+        <script src="./client/components/editController.js"></script>
+        <script src="./client/components/userDataService.js"></script>
+        <script src="./client/components/nav.js"></script>
+    </head>
+    <body ng-controller="mainController">
+    <navigation authorized="authorized"></navigation>
+    <div ui-view="" id="ui-view"></div>
+</body>
+</html>
+

@@ -1,0 +1,10 @@
+<form method="post" name="logForm" class="col-lg-4 col-md-8 col-sm-12 d-flex justify-content-center flex-wrap mx-auto border p-4">
+    <input maxlength=40 class="form-control m-2" placeholder="Nickname" ng-model="user.nickname" type="text" required   name='username'/>
+    <input maxlength=40 class="form-control m-2" placeholder="Password" ng-model="user.password" type="password" required   name='password'/>
+    <div class="col-12 mt-3 ">
+        <button type="submit" class="btn d-flex mx-auto btn-outline-secondary m-2" ng-click="logUser(newUser)"ng-disabled="logForm.$invalid">Login</button>
+    </div>
+    <div class="checkbox">
+        <label><input type="checkbox" ng-model="rememberMe"> Remember me</label>
+    </div>  
+</form>

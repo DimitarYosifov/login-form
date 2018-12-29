@@ -1,0 +1,12 @@
+<div class="col-lg-4 col-md-8 col-sm-12 mx-auto" ng-model="authorized">
+    <ul class="list-unstyled d-flex  nav p-2 badge">
+        <li class="p-1 menu-item" ng-class="state === 'home' ? 'active-nav-item' : ''" ui-sref="home" ng-show="authorized">home</li>
+        <li class="p-1 menu-item" ng-class="state === 'edit' ? 'active-nav-item' : ''" ui-sref="edit" ng-show="authorized">edit</li>
+        <li class="p-1 menu-item" ng-class="state === 'register' ? 'active-nav-item' : ''" ui-sref="register" ng-show="!authorized">register</li>
+        <li class="p-1 menu-item" ng-class="state === 'login' ? 'active-nav-item' : ''" ui-sref="login" ng-show="!authorized">login</li>
+        <li class="p-1 menu-item" ng-click="logOut()" ng-show="authorized">logout</li>
+    </ul>
+</div>
+
+
+

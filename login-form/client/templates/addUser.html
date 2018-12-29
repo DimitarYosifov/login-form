@@ -1,0 +1,17 @@
+<form name="regForm" class="col-lg-4 col-md-8 col-sm-12 d-flex justify-content-center flex-wrap mx-auto border p-4">
+    <input maxlength=40 class="form-control m-2" placeholder="Nickname" ng-model="newUser.nickname" type="text" required/>
+    <input maxlength=40 class="form-control m-2" placeholder="Password" ng-model="newUser.password" type="password" required/>
+    <input maxlength=40 class="form-control m-2" placeholder="Confirm" ng-model="newUser.confirm" type="password" required/>
+    <input maxlength=40 class="form-control m-2" placeholder="Email" ng-model="newUser.email" type="email" required/>
+    <input maxlength=15 class="form-control m-2" placeholder="Phone" ng-model="newUser.phone" type="text" required only-numbers/>
+    <select id="country" class="form-control m-2" ng-model="newUser.country">
+        <option ng-repeat="country in countries" >{{country}}</option>
+        <option style="display: none;"></option>
+    </select>
+    <div class="col-12 mt-3 ">
+        <button class="btn d-flex mx-auto btn-outline-secondary m-2" ng-click="addUser(newUser)"ng-disabled="regForm.$invalid">Register</button>
+    </div>
+    <div class="checkbox">
+        <label><input type="checkbox" ng-model="rememberMe"> Remember me</label>
+    </div>  
+</form>

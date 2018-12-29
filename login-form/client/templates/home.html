@@ -1,0 +1,23 @@
+<div>
+    <div>
+        <table class="col-lg-4 col-md-8 col-sm-12  mx-auto table table-bordered table-hover table-striped">
+            <thead>
+                <tr>
+                    <th>user</th>
+                    <th>email</th>
+                    <th>country</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="user in users track by $index">
+                    <td>{{user.nickname}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.country}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+

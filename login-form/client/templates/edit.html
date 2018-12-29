@@ -1,0 +1,19 @@
+<form name="editForm" class="col-lg-4 col-md-8 col-sm-12 d-flex justify-content-center flex-wrap mx-auto border p-4">
+    <input maxlength=40 class="form-control m-2" placeholder="Nickname" ng-model="user.nickname" type="text" required/>
+    <input maxlength=40 class="form-control m-2" placeholder="Password" ng-model="user.password" type="password" required/>
+    <input maxlength=40 class="form-control m-2" placeholder="Confirm" ng-model="user.confirm" type="password" required/>
+    <input maxlength=40 class="form-control m-2" placeholder="Email" ng-model="user.email" type="email" readonly/>
+    <input maxlength=15 class="form-control m-2" placeholder="Phone" ng-model="user.phone" type="text" required only-numbers/>
+    <select id="country" class="form-control m-2" ng-model="user.country" ng-init="user.country">
+        <option ng-repeat="country in countries" >{{country}}</option>
+        <option style="display: none;"></option>
+    </select>
+    <div class="col-12 mt-3 ">
+        <button class="btn d-flex mx-auto btn-outline-secondary m-2" ng-click="updateUser()"ng-disabled="editForm.$invalid">Update</button>
+    </div>
+    <div ng-show="updateSuccessful" >update successful</div>
+</form>
+
+
+
+
